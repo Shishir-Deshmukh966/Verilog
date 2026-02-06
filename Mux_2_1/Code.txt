@@ -1,0 +1,8 @@
+
+module Mux2_1(
+    input [1:0] I,
+    input S,
+    output Y
+    );
+    assign Y=(I[0]&~S)|(I[1]&S);
+endmodule
