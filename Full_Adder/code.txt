@@ -1,0 +1,24 @@
+
+module FA(
+    input A,
+    input B,
+    input Cin,
+    output Sum,//reg for behavioural
+    output Cout
+    );
+    wire S1,C1,C2;
+    Half_Adder HA1 (A,B,S1,C1);
+    Half_Adder HA2(S1,Cin,Sum,C2);
+    or o1(Cout,C1,C2);
+    /*wire S1, C1, C2;     //Dataflow
+
+Half_Adder HA1 (A,   B,   S1, C1);
+Half_Adder HA2 (S1,  Cin, Sum, C2);
+or o1 (Cout, C1, C2);
+*/
+
+/*always @(*) begin
+    Sum  = A ^ B ^ Cin;
+    Cout = (A & B) | (A & Cin) | (B & Cin);
+end*/
+endmodule
