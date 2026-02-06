@@ -1,0 +1,7 @@
+
+module (A,B,Y);
+  input reg [3:0];
+
+
+
+   endmodule   

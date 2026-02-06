@@ -1,0 +1,12 @@
+
+module Mux4_1(
+    input [3:0] I,
+    input [1:0] S,
+    output Y
+    );
+    wire [1:0] L;
+    Mux2_1 M1 (I[1:0],S[0],L[0]);
+    Mux2_1 M2 (I[3:2],S[0],L[1]);
+    Mux2_1 M3 (L[1:0],S[1],Y);
+    
+endmodule
