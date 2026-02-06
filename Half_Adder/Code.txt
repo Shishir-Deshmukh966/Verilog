@@ -1,0 +1,47 @@
+
+
+module Half_Adder(
+    input A,
+    input B,
+    output  Sum,
+    output  Cout
+    );
+    /*Gate Level MOdelling
+      xor X1(Sum,A,B);
+      and A1(Cout,A,B);*/
+     
+    assign Sum=A^B;//Datflow Modelling
+    assign Cout=A&B;
+    
+    
+    
+   //Behavioral
+   /* always@(*)
+    if(A==0&&B==0)
+    begin 
+     Sum=1'b0;
+     Cout=1'b0;
+    end
+    
+    else if(A==0&&B==1)
+    begin 
+     Sum=1'b1;
+     Cout=1'b0;
+    end
+    
+    else if(A==1&&B==0)
+    begin 
+     Sum=1'b1;
+     Cout=1'b0;
+    end
+   
+   else if(A==1&&B==1)
+    begin 
+     Sum=1'b0;
+     Cout=1'b1;
+    end */
+    
+    
+    
+endmodule
+     
